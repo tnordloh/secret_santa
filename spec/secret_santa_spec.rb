@@ -4,5 +4,5 @@ require_relative "../lib/secret_santa"
 
 describe SecretSanta do 
   data=File.readlines("./data/test1")
-  SecretSanta.get_santas(data)
+  p SecretSanta.get_santas(data)
 end
