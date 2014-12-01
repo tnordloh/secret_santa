@@ -2,9 +2,9 @@ module SecretSanta
   class ReadData
     require_relative "person"
     attr_reader :santas
-    def initialize
+    def initialize(list)
       @santas = []
-      ARGF.readlines.each do |line|
+      list.each do |line|
         @santas << SecretSanta::Person.new(line)
       end
     end
