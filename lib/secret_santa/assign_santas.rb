@@ -16,8 +16,9 @@ module SecretSanta
       end
     end
     def choose_valid_santa_list
-      possibilities = valid_permutations
-      possibilities[rand(0...possibilities.size)]
+      choices=valid_permutations
+      raise "no valid santas" if choices.size==0
+      valid_permutations.sample
     end
   end
 end
