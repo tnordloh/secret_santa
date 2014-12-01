@@ -12,9 +12,7 @@ module SecretSanta
 
     def valid_permutations
       @permutations.select do |permutation|
-        permutation.all? do |item|
-          item[0] != item[1]
-        end
+        permutation.all? { |item| item[0] != item[1] }
       end
     end
     def choose_valid_santa_list

@@ -8,8 +8,8 @@ module SecretSanta
       @email.gsub!(/[<>]/,"")
     end
 
-    def <=>(another)
-      return @last_name <=> another.last_name
+    def <=>(other)
+      return @last_name <=> other.last_name
     end
     
     def to_s
