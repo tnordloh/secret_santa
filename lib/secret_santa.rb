@@ -7,6 +7,6 @@ module SecretSanta
     secret_santas = SecretSanta::AssignSantas.new(data.santas)
     possibilities = secret_santas.valid_permutations
     final_entry = possibilities[rand(0...possibilities.size)]
-    final_entry.each {|entry| puts "#{entry[0]} is assigned to #{entry[1]}"}
+    final_entry.map {|entry| "#{entry[0]} is assigned to #{entry[1]}"}
   end
 end
