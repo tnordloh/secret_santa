@@ -17,5 +17,9 @@ module SecretSanta
         end
       end
     end
+    def choose_valid_santa_list
+      possibilities = valid_permutations
+      possibilities[rand(0...possibilities.size)]
+    end
   end
 end
