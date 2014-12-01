@@ -3,5 +3,6 @@ require "minitest/autorun"
 require_relative "../lib/secret_santa"
 
 describe SecretSanta do 
-  SecretSanta.get_santas
+  data=File.readlines("./data/test1")
+  SecretSanta.get_santas(data)
 end
